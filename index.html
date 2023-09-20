@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+
+        <button id="btn1"> < </button>
+    
+        <div>   
+            <img src="img/img1.jpg" alt="" id="img1">
+            <img src="img/img2.jpg" alt="" id="img2">
+        </div>
+
+        <button id="btn2"> > </button>
+
+    </section>
+</body>
+    <script>
+        const img1 = document.getElementById('img1');
+        const img2 = document.getElementById('img2');
+            
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        
+        img2.style.display = 'none';
+
+        btn1.addEventListener('click', function(){
+            if(img1.style.display == 'block'){
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+
+            }
+        })
+
+        btn2.addEventListener('click', function(){
+            if(img1.style.display == 'block'){
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+
+            } else{
+                img1.style.display = 'block';
+                img2.style.display = 'none';
+            }
+        })
+    </script>
+</html>
