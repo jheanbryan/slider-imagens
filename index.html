@@ -8,45 +8,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
+    <section class="slider">
+        <div class="slides">
+            <!--Radio-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
 
-        <button id="btn1"> < </button>
-    
-        <div>   
-            <img src="img/img1.jpg" alt="" id="img1">
-            <img src="img/img2.jpg" alt="" id="img2">
+
+            <!--slides img-->
+            <div class="slide first">
+                <img src="img/img1.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="img/img2.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="img/img3.webp" alt="">
+            </div>
+
+            
+            <div class="slide">
+                <img src="img/img4.jpg" alt="">
+            </div>
+
+        
+            <!--Navigation-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
         </div>
 
-        <button id="btn2"> > </button>
-
-    </section>
-</body>
-    <script>
-        const img1 = document.getElementById('img1');
-        const img2 = document.getElementById('img2');
-            
-        const btn1 = document.getElementById('btn1');
-        const btn2 = document.getElementById('btn2');
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
         
-        img2.style.display = 'none';
-
-        btn1.addEventListener('click', function(){
-            if(img1.style.display == 'block'){
-                img1.style.display = 'none';
-                img2.style.display = 'block';
-
-            }
-        })
-
-        btn2.addEventListener('click', function(){
-            if(img1.style.display == 'block'){
-                img1.style.display = 'none';
-                img2.style.display = 'block';
-
-            } else{
-                img1.style.display = 'block';
-                img2.style.display = 'none';
-            }
-        })
-    </script>
+    </section>
+    <script src="app.js"></script>
+</body>
 </html>
